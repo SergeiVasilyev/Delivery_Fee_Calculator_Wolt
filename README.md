@@ -7,6 +7,18 @@ pip install -r requirements.txt
 ### Run 
 uvicorn backend.main:app
 
+POST Request adress
+
+http://127.0.0.1:8000/delivery_fee/
+
+JSON Example
+
+{"cart_value": 790, "delivery_distance": 2235, "number_of_items": 4, "time": "2024-01-15T13:00:00Z"}
+
+Response Example
+
+{"delivery_fee": 710}
+
 ### Specification
 Rules for calculating a delivery fee
 
