@@ -6,6 +6,7 @@ class Cart:
         self.time = time
         self.fee = 0
     
+
     def no_fee(func):
     # No fee if total price is equal or more than 20000 (€200.00)
         def wrapper(obj):
@@ -14,12 +15,14 @@ class Cart:
             return 0
         return wrapper
 
+
     @no_fee
     def ten_euro_fee(self):
         if self.total < 1000:
             self.fee = 1000 - self.total
             return self.fee
         return 0
+
 
     @no_fee
     def delivery_fee(self):
@@ -30,6 +33,7 @@ class Cart:
             return self.fee
         return base_fee
     
+
     @no_fee
     def extra_surcharge(self):
         min_no_extra_fee, min_no_extra_bulk = 4, 12
@@ -39,6 +43,7 @@ class Cart:
                 self.fee += 120
             return self.fee
         return 0
+
 
     @no_fee
     def no_fee_on_friday(self):

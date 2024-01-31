@@ -4,10 +4,6 @@ from datetime import datetime
 
 def calculate(total, delivery_distance, number_of_items, time):
     cart = Cart(total, delivery_distance, number_of_items, time)
-    # print('ten_euro_fee', cart.ten_euro_fee())
-    # print('delivery_fee', cart.delivery_fee())
-    # print('extra_surcharge', cart.extra_surcharge())
-    # print('time', time)
     return cart.total_fee()
 
 
